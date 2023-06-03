@@ -75,21 +75,20 @@
 .card {
   display: flex;
   align-items: center;
-  margin-right: 20px; /* Adjust the margin between the cards */
+  margin-right: 20px;
 }
 
 .card-content {
-  margin-left: 10px; /* Adjust the spacing between the image and the content */
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
 }
 
 .card-img {
   img {
-    width: 200px; /* Adjust the width as per your requirement */
+    width: 200px;
     height: auto;
-    margin: 20px; /* Adjust the margin as per your requirement */
-
+    margin: 20px;
   }
 }
 
@@ -98,7 +97,7 @@
 }
 
 .card-content p {
-  margin-top: 5px; /* Adjust the spacing between the heading and the paragraph */
+  margin-top: 5px;
 }
 
 .logo-parcerias {
@@ -108,9 +107,9 @@
 }
 
 .logo-img {
-  width: 200px; /* Adjust the width as per your requirement */
+  width: 200px;
   height: auto;
-  margin: 20px; /* Adjust the margin as per your requirement */
+  margin: 20px;
 }
 
 .logo-podcasts {
@@ -119,7 +118,7 @@
 }
 
 .logo-podcast-img {
-  width: 100px; /* Adjust the width as per your requirement */
+  width: 100px;
   height: auto;
 }
 
