@@ -1,5 +1,10 @@
-<p>Welcome <%= @email %>!</p>
 
-<p>You can confirm your account email through the link below:</p>
+<h2>Oi, <%= @user.name %></h2>
+<p>Aqui é Ibson do Pipoca Ágil. Você acabou de se inscrever em nosso Clube do Assinante para aprender e ficar por dentro das últimas tendências das tecnologia e do mundo ágil.</p>
+
+<p>Para que eu possa confirmar o seu cadastro, você deve confirmar o seu endereço de e-mail. É só clicar no link abaixo:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p>Grande abraço,</p>
+<p>Ibson</p>
