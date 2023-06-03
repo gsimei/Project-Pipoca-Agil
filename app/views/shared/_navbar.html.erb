@@ -1,38 +1,36 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
-          </a>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-        <% end %>
-      </ul>
+<div class="navbar">
+  <%= image_tag "logos/Topo.png" %>
+  <div class= "nav-links d-flex justify-content-between">
+    <div class= "start-links">
+      <%= link_to "Inicio", root_path, class: "px-5" %>
+      <%= link_to "Projetos", root_path, class: "px-5" %>
+      <%= link_to "Bio", root_path, class: "px-5" %>
+      <%= link_to "Livros", root_path, class: "px-5" %>
+      <%= link_to "Contato", root_path, class: "px-5" %>
+    </div>
+    <div class= "end-link">
+      <%= link_to "AO VIVO", root_path, class: "px-4" %>
+      <%= image_tag "icones/Transmitir ao vivo.png" %>
+    </div>
+  </div>
+  <div class= "nav-social d-flex justify-content-between">
+    <div class= "start-social">
+      <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
+        <%= image_tag "icones/logo-youtube.png" %>
+      <% end %>
+       <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
+        <%= image_tag "icones/logo-facebook.png" %>
+      <% end %>
+       <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
+        <%= image_tag "icones/logo-instagram.png" %>
+      <% end %>
+      <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
+        <%= image_tag "icones/logo-twitter.png" %>
+      <% end %>
+    </div>
+    <div class= "end-social">
+      <%= link_to "Me Pague um café", root_path, class: "px-2" %>
+      <%= image_tag "icones/icons8-café.gif" %>
     </div>
   </div>
 </div>

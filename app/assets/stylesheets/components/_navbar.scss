@@ -1,12 +1,91 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
+.navbar {
+  position: relative;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  img {
+    width: 100%;
+  }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5b496a;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+  }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  .start-links {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #B0B0B0;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .end-link {
+    display: flex;
+    align-items: center;
+    a {
+      color: black;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    img {
+      width: 50px;
+      margin-right: 10px;
+    }
+  }
+
+  .nav-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .start-social {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    img {
+      width: 38px;
+      margin-left: 10px;
+    }
+
+  }
+
+  .end-social {
+    display: flex;
+    align-items: center;
+    a {
+      color: black;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    img {
+      width: 50px;
+      margin-right: 10px;
+    }
+  }
 }
