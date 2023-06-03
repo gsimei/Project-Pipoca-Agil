@@ -1,2 +1,120 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="containner">
+  <div class="d-flex first-banner">
+    <div class="first-banner-left">
+      <h1>O Podcast  mais animado  do Mundo Agil</h1>
+      <p>Cadastre-se no clube de <br> assinantes e tenha acesso a todos <br> os conteudos excluisivos do <br> mundo da tecnologia</p>
+      <a class="btn btn-cadastrar" href="/users/sign_up" style="margin-bottom: 10px;">Cadastrar</a>
+      <p id="possui-conta">
+        <a href="/users/sign_in" style="color: #000;">Já possui conta? Entre aqui</a>
+      </p>
+    </div>
+    <div class="first-banner-right">
+      <%= image_tag "Photos-Ibson/foto_ibson.png" %> <br>
+      <%= link_to "Acesse a trilha do conhecimento", root_path, style: "color: #000; margin-right: 5px;" %>
+    </div>
+  </div>
+  <div class="d-flex second-banner mt-5 ">
+    <div>
+      <%= video_tag "Photos-Ibson/video_destaque.mp4", controls: true %>
+    </div>
+
+    <div>
+      <h1>Video em Destaque</h1>
+      <p>O primeiro Podcast carioca falando sobre agilidade.</p>
+      <p>Em parceiria com Paulo Caroli</p>
+    </div>
+  </div>
+  <h1 class="title text-center mt-5">Ultimos Episodios</h1>
+  <div class="cards">
+    <div class="d-flex">
+      <div class="d-flex card">
+        <div class="card-img">
+          <%= image_tag "logos/pipoca_episodio_pix.jpg" %>
+        </div>
+        <div class="card-content">
+          <h3>Pix - Desenvolvimento agil</h3>
+          <p>
+            17 de janeiro de 2022<br>
+            Convidados: Caique, Nelson,<br>
+            Racioppi, Romulo, Meire, Guilherme,<br>
+            LP, Marcelo e Carlos.
+          </p>
+        </div>
+      </div>
+      <div class="d-flex card">
+        <div class="card-img">
+          <%= image_tag "logos/pipoca_clinica_kanban.jpg" %>
+        </div>
+        <div class="card-content">
+          <h3>Clinica KANBAN</h3>
+          <p>
+            10 de janeiro de 2022<br>
+            Convidado: Antonio Polo.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex">
+      <div class="d-flex card">
+        <div class="card-img">
+          <%= image_tag "logos/pipoca_cliente_agil.jpg" %>
+        </div>
+        <div class="card-content">
+          <h3>Cliente Agil</h3>
+          <p>
+            11 de janeiro de 2022<br>
+            Convidados: Caique e Carlos Cavalcante.
+          </p>
+        </div>
+      </div>
+      <div class="d-flex card">
+        <div class="card-img">
+          <%= image_tag "logos/pipoca_agilidade_portugal.jpg" %>
+        </div>
+        <div class="card-content">
+          <h3>Agilidade em Portugal</h3>
+          <p>
+            8 de janeiro de 2022<br>
+            Convidado: George de Luca.tt
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1 class="title text-center mt-5">Parcerias</h1>
+  <div class="logo-parcerias">
+    <div class="d-flex">
+      <%= image_tag "logos/logo_coach.jpg", class: "logo-img" %>
+      <%= image_tag "logos/logo_agiliza_ceara.jpg", class: "logo-img" %>
+      <%= image_tag "logos/logo_fleks.jpg", class: "logo-img" %>
+      <%= image_tag "logos/logo_conversa_agil.jpg", class: "logo-img" %>
+      <%= image_tag "logos/logo_inovacao.jpg", class: "logo-img" %>
+    </div>
+    <div class="d-flex">
+      <%= image_tag "logos/logo_rio_gamer.jpg", class: "logo-img" %>
+      <%= image_tag "logos/logo_fabrica.jpg", class: "logo-img" %>
+      <%= image_tag "logos/logo_inovagil.jpg", class: "logo-img" %>
+      <%= image_tag "logos/logo_iiba.jpg", class: "logo-img" %>
+      <%= image_tag "logos/logo_manifest.jpg", class: "logo-img" %>
+    </div>
+  </div>
+  <h1 class="title text-center mt-5 pb-5">Ouca em:</h1>
+  <div class="d-flex justify-content-between logo-podcasts">
+    <%= image_tag "Icones_streaming/icone_spotify.jpg", class: "logo-podcast-img" %>
+    <%= image_tag "Icones_streaming/icone_anchor.jpg", class: "logo-podcast-img" %>
+    <%= image_tag "Icones_streaming/icone_google.jpg", class: "logo-podcast-img" %>
+    <%= image_tag "Icones_streaming/icone_overcast.jpg", class: "logo-podcast-img" %>
+    <%= image_tag "Icones_streaming/icone_podcast_apple.jpg", class: "logo-podcast-img" %>
+  </div>
+  <h2 class="feedback text-center mt-5">Seu feedback eh muito importante para nos!</h2>
+  <div class="stars-container">
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+  </div>
+  <br>
+  <textarea id="feedback" name="feedback" rows="8" cols="100"></textarea>
+
+</div>
