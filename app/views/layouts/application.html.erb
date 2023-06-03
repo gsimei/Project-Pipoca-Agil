@@ -13,7 +13,9 @@
   </head>
 
   <body>
+   <% unless controller_name == 'registrations' && action_name.in?(%w[new create]) || controller_name == 'sessions' && action_name.in?(%w[new create]) %>
     <%= render "shared/navbar" %>
+    <% end %>
     <%= render "shared/flashes" %>
 
     <%= yield %>

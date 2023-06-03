@@ -1,20 +1,28 @@
+.devise {
+  background-color: #EFE9F3;
+  height: 100vh;
+  align-items: center;
+}
+
+// @media screen and (max-width: 768px) {
+//   .devise {
+//     flex-direction: column;
+//   }
+// }
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin-bottom: -1rem;
+}
+
 .rounded-input {
   border-radius: 10px;
   padding: 10px;
   border-color: #000000;
   margin-bottom: 20px;
-}
-
-.btn-custom {
-  color: #000000;
-  width: 180px;
-  background-color: #6c757d;
-  border-color: #6c757d;
-}
-
-.btn-light-gray {
-  background-color: #dddddd; /* Altere o valor para o cinza desejado */
-  color: #333333; /* Altere o valor para a cor desejada */
 }
 
 .btn-bold {
@@ -26,19 +34,49 @@
   padding: 8px;
   border-color: #000000;
   margin-bottom: 8px;
-  width: 500px;
+  width: 20rem;
+  background-color: white;
+  color: #999898;
 }
+ .password-links {
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  padding-left: 7rem;
+  a {
+    color: black;
+    text-decoration: underline;
+    font-weight: 600;
+  }
 
-.btn-custom {
+}
+.btn-devise {
   color: #000000;
   width: 180px;
-  background-color: #6c757d;
-  border-color: #6c757d;
-  margin-top: -10px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  margin-top: 6rem;
+  font-weight: bold;
+  &:hover {
+    background-color: #D9D9D9;
+    color: inherit;
+    text-decoration: none;
+
+  }
 }
 
 .login-form {
-  margin-top: -10px;
+  background-color: white;
+  height: 47rem;
+  border-radius: 10px;
+}
+
+.txt-login {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: -25px;
 }
 
 .logo {
@@ -47,7 +85,8 @@
 }
 
 .logo img {
-  max-width: 150px;
+  max-width: 56%;
+  height: auto;
 }
 
 h2 {
@@ -55,18 +94,21 @@ h2 {
   color: #000000;
 }
 
+.icons {
+
+  text-align: center;
+  margin-top: 5rem;
+}
+
 .social-icons {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-top: 20px;
 }
 
-.social-icons p {
-  margin-bottom: 10px;
-}
-
-.social-icons img {
-  display: inline-block;
-  margin: 0 10px;
-  max-width: 40px;
-  height: auto;
+.fa-brands {
+  font-size: xx-large;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }

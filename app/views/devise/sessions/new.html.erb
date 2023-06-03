@@ -1,12 +1,12 @@
 
-<div class="container">
+<div class="containner devise">
   <div class="row">
-    <div class="col-md-6 mx-auto login-form">
+    <div class="col-md-4 mx-auto login-form">
       <div class="logo">
         <%= image_tag "logos/logo_pipoca_agil.png" %>
         <%# <img src="https://res.cloudinary.com/dbtr2yaho/image/upload/v1684956837/Sem_t%C3%ADtulo_yfiutx.png" alt="Logo"> %>
       </div>
-      <div class="text-center">
+      <div class="text-center txt-login">
         <h2 style="font-weight: bold; color: #000000;">Faça Login</h2>
       </div>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
@@ -16,22 +16,31 @@
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "email", class: "rounded-input" },
-                      placeholder: "E-mail *" %>
+                      placeholder: "E-mail *",
+                       label: false %>
           <%= f.input :password,
                       required: false,
                       input_html: { autocomplete: "current-password", class: "rounded-input" },
-                      placeholder: "Senha *" %>
-          <%= link_to "Esqueceu sua senha?", new_password_path(resource_name) %>
+                      placeholder: "Senha *",
+                      label: false %>
+        </div>
+        <div class= "password-links">
+          <%= link_to "Esqueci minha senha?!", new_password_path(resource_name) %>
           <%#= f.input :password, as: :boolean, label: "Exibir senha" %>
+          <p>Exibir Senha</p>
         </div>
         <div class="form-actions text-center">
-          <%= f.button :submit, "Log in" %>
+          <%= f.button :submit, "Entrar", class: "btn btn-lg btn-devise" %>
         </div>
       <% end %>
+      <div class="icons">
+        <p style="font-weight: bold; color: #000000; font-size: 18px;"> Ou entre com:</p>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-google"></i>
+        </div>
+      </div>
+      <%#= render "devise/shared/links" %>
     </div>
-    <div class="social-icons">
-      <p style="font-weight: bold; color: #000000; font-size: 18px;"> Ou entre com:</p>
-    </div>
-    <%= render "devise/shared/links" %>
   </div>
 </div>
