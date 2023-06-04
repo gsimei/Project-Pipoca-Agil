@@ -1,36 +1,60 @@
-<div class="navbar">
-  <%= image_tag "logos/Topo.png" %>
-  <div class= "nav-links d-flex justify-content-between">
-    <div class= "start-links">
-      <%= link_to "Inicio", root_path, class: "px-5" %>
-      <%= link_to "Projetos", root_path, class: "px-5" %>
-      <%= link_to "Bio", root_path, class: "px-5" %>
-      <%= link_to "Livros", root_path, class: "px-5" %>
-      <%= link_to "Contato", root_path, class: "px-5" %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="navbar-ppa">
+    <%= image_tag "logos/Topo.png" %>
+    <div class= "nav-links d-flex justify-content-between">
+      <div class= "start-links">
+        <%= link_to "Inicio", root_path, class: "px-5" %>
+        <%= link_to "Projetos", root_path, class: "px-5" %>
+        <%= link_to "Bio", root_path, class: "px-5" %>
+        <%= link_to "Livros", root_path, class: "px-5" %>
+        <%= link_to "Contato", root_path, class: "px-5" %>
+      </div>
+      <div class= "end-links">
+        <%= link_to "AO VIVO", root_path, class: "px-4 end-link" %>
+        <%= image_tag "icones/Transmitir ao vivo.png", class: "end-link" %>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <%# if current_user.photo.attached? %>
+              <%#= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%# else %>
+              <%= image_tag "icones/user.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%# end %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Editar minha conta",   edit_user_registration_path, class: "dropdown-item", id: "dropdown-link" %>
+              <%= link_to "Sair", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item", id: "dropdown-link" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%#= link_to "Login", new_user_session_path, class: "nav-link btn btn-light " %>
+          </li>
+        <% end %>
+      </ul>
     </div>
-    <div class= "end-link">
-      <%= link_to "AO VIVO", root_path, class: "px-4" %>
-      <%= image_tag "icones/Transmitir ao vivo.png" %>
+      </div>
     </div>
-  </div>
-  <div class= "nav-social d-flex justify-content-between">
-    <div class= "start-social">
-      <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
-        <%= image_tag "icones/logo-youtube.png" %>
-      <% end %>
-       <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
-        <%= image_tag "icones/logo-facebook.png" %>
-      <% end %>
-       <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
-        <%= image_tag "icones/logo-instagram.png" %>
-      <% end %>
-      <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
-        <%= image_tag "icones/logo-twitter.png" %>
-      <% end %>
+    <div class= "nav-social d-flex justify-content-between">
+      <div class= "start-social">
+        <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
+          <%= image_tag "icones/logo-youtube.png" %>
+        <% end %>
+        <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
+          <%= image_tag "icones/logo-facebook.png" %>
+        <% end %>
+        <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
+          <%= image_tag "icones/logo-instagram.png" %>
+        <% end %>
+        <%= link_to "http://www.pipocaagil.com.br", target: "_blank" do %>
+          <%= image_tag "icones/logo-twitter.png" %>
+        <% end %>
+      </div>
+      <div class= "end-social">
+        <%= link_to "Me Pague um café", root_path, class: "px-2" %>
+        <%= image_tag "icones/icons8-café.gif" %>
+      </div>
     </div>
-    <div class= "end-social">
-      <%= link_to "Me Pague um café", root_path, class: "px-2" %>
-      <%= image_tag "icones/icons8-café.gif" %>
-    </div>
+
   </div>
 </div>
