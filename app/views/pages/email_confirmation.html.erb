@@ -1,0 +1,20 @@
+<div class="email-confirmation">
+  <div class="logo-email">
+    <%= image_tag "logos/logo_pipoca_agil.png" %>
+  </div>
+  <div class="roww">
+    <div class="col-md-5 mx-auto text-email">
+      <p>Acabamos de receber seu cadastro! Muito obrigado por se juntar á nossa comunidade! &#127881; Só falta um último passo para que você possa aproveitar todos os benefícios.</p>
+      <p>Acabamos de enviar um link de confirmação para seu e-mail. Dê uma olhada na sua caixa de entrada ( e verifique também a pasta de spam ).
+          Assim que clicar nele, seu cadastro será oficialmente confirmado.</p>
+    </div>
+  </div>
+  <div class="roww">
+    <div class="col-md-5 mx-auto btn-return d-flex">
+      <%= link_to root_path do %>
+        <i class="fa-solid fa-arrow-left"></i>
+      <% end %>
+      <%= link_to "Voltar!", root_path, class: "btn-voltar" %>
+    </div>
+  </div>
+</div>

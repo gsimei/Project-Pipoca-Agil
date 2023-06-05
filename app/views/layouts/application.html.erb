@@ -13,11 +13,12 @@
   </head>
 
   <body>
-   <% unless controller_name == 'registrations' && action_name.in?(%w[new create]) || controller_name == 'sessions' && action_name.in?(%w[new create]) %>
+   <% unless controller_name == 'registrations' && action_name.in?(%w[new create]) || controller_name == 'sessions' && action_name.in?(%w[new create]) || controller_name == 'pages' && action_name == 'email_confirmation' %>
     <%= render "shared/navbar" %>
     <% end %>
     <%= render "shared/flashes" %>
 
     <%= yield %>
   </body>
+
 </html>

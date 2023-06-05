@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   devise_for :users, controllers: { registrations: 'users/registrations' }
 
   root to: "pages#home"
@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  get "/email_confirmation", to: "pages#email_confirmation", as: "email_confirmation"
 end
