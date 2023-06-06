@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "/email_confirmation", to: "pages#email_confirmation", as: "email_confirmation"
+  get "/privacy", to: "pages#privacy", as: "privacy"
 end
