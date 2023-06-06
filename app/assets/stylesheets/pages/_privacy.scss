@@ -1,0 +1,38 @@
+.privacy-policy{
+  padding-top: 4rem;
+}
+
+.privacy-policy-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin-top: -1rem;
+  border-radius: 10px;
+  p, ul, li {
+    margin-bottom: 0;
+    text-align: start;
+    font-size: 13px;
+
+  }
+}
+
+.privacy-terms {
+  font-size: 11px;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  color: black;
+}
+
+.privacy-title {
+  font-size: xx-large;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.text-privacy {
+  padding: 1rem 2rem 1rem 2rem;
+}

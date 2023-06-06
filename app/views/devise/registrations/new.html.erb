@@ -1,47 +1,37 @@
-
-<div class="container">
+<div class="containner devise">
   <div class="row">
-    <div class="col-md-6 mx-auto">
-      <div class="text-center">
-        <h2 style="font-weight: bold;">Crie sua conta</h2>
+    <div class="col-md-4 mx-auto login-form-signup">
+      <div class="text-center mb-3 mt-3">
+       <p class="title-devise mt-3">Crie sua conta</p>
       </div>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
         <%= f.error_notification %>
-
-        <div class="form-inputs">
-          <%= f.input :name,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "Name", class: "rounded-input" },
-                      placeholder: "Nome Completo *" %>
-          <%= f.input :date_of_birth,
-                      required: true,
-                      as: :string,
-                      input_html: { autocomplete: "off", class: "rounded-input", placeholder: "Data de Nascimento (dd/mm/aaaa) *" }%>
-
-          <%= f.input :email,
-                      required: true,
-                      input_html: { autocomplete: "email", class: "rounded-input" },
-                      placeholder: "E-mail *" %>
-          <%= f.input :password,
-                      required: true,
-                      hint: ("Mínimo de #{@minimum_password_length} caracteres. Utilize letras, números e símbolos."),
-                      input_html: { autocomplete: "new-password", class: "rounded-input" },
-                      placeholder: "Senha *" %>
-          <%= f.input :password_confirmation,
-                      required: true,
-                      input_html: { autocomplete: "new-password", class: "rounded-input" },
-                      placeholder: "Confirmação de Senha *" %>
-          <p>* Campos obrigatórios</p>
-          <%#= f.input :agree_terms,
-                        as: :boolean,
-                        label: "Eu li e concordo com os termos de privacidade" %>
-          <%#= f.input :agree_terms,
-                        as: :boolean,
-                        label: "Deseja receber atualizacoes por email?" %>
-        </div>
-        <div class="text-center">
-          <%= f.button :submit, "Cadastrar", class: "btn btn-lg rounded-input btn-custom btn-light-gray btn-bold" %>
+        <div class="form-inputs-signup mx-auto">
+          <%= f.input :name, required: true, autofocus: true, input_html: { autocomplete: "name", class: "rounded-input" }, label: false, placeholder: "Nome Completo *" %>
+          <%= f.input :date_of_birth, required: true, as: :string, input_html: { autocomplete: "off", class: "rounded-input", placeholder: "Data de Nascimento (dd/mm/aaaa) *" }, label: false %>
+          <%= f.input :email, required: true, input_html: { autocomplete: "email", class: "rounded-input" }, label: false, placeholder: "E-mail *" %>
+          <%= f.input :password, required: true, input_html: { autocomplete: "new-password", class: "rounded-input" }, label: false, placeholder: "Senha *" %>
+          <p class="hint-password">Mínimo de <%= @minimum_password_length %> caracteres. Utilize letras, números e símbolos.</p>
+          <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password", class: "rounded-input" }, label: false, placeholder: "Confirme sua Senha *" %>
+          <div class="agree-terms">
+            <%= f.check_box :agree_terms, id: "agree_terms" %>
+            <%= label_tag "agree_terms", "Eu li e concordo com os " %>
+            <%= link_to "termos de privacidade", privacy_path, class: "privacy-terms" %>
+            <%= f.input :agree_terms, as: :boolean, label: "Deseja receber atualizacoes por email?" %>
+          </div>
+          <div class="mandatory-field">
+            <p>* Campos obrigatórios</p>
+          </div>
+          <div class="icons-signup">
+            <p class="txt-social"> Ou entre com:</p>
+            <div class="social-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-google"></i>
+            </div>
+          </div>
+          <div class="form-actions text-center">
+            <%= f.button :submit, "Cadastrar", class: "btn btn-lg btn-devise-signup" %>
+          </div>
         </div>
       <% end %>
     </div>

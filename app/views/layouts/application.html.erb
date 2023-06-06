@@ -13,7 +13,8 @@
   </head>
 
   <body>
-   <% unless controller_name == 'registrations' && action_name.in?(%w[new create]) || controller_name == 'sessions' && action_name.in?(%w[new create]) || controller_name == 'pages' && action_name == 'email_confirmation' %>
+   <% unless controller_name == 'registrations' && action_name.in?(%w[new create]) || controller_name == 'sessions' && action_name.in?(%w[new create]) ||
+             controller_name == 'pages' && action_name == 'email_confirmation'|| controller_name == 'pages' && action_name == 'privacy' %>
     <%= render "shared/navbar" %>
     <% end %>
     <%= render "shared/flashes" %>
