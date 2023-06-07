@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-4 mx-auto login-form-signup">
       <div class="text-center mb-3 mt-3">
-       <p class="title-devise mt-3">Crie sua conta</p>
+        <p class="title-devise mt-3">Crie sua conta</p>
       </div>
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
         <%= f.error_notification %>
@@ -10,7 +10,12 @@
           <%= f.input :name, required: true, autofocus: true, input_html: { autocomplete: "name", class: "rounded-input" }, label: false, placeholder: "Nome Completo *" %>
           <%= f.input :date_of_birth, required: true, as: :string, input_html: { autocomplete: "off", class: "rounded-input", placeholder: "Data de Nascimento (dd/mm/aaaa) *" }, label: false %>
           <%= f.input :email, required: true, input_html: { autocomplete: "email", class: "rounded-input" }, label: false, placeholder: "E-mail *" %>
-          <%= f.input :password, required: true, input_html: { autocomplete: "new-password", class: "rounded-input" }, label: false, placeholder: "Senha *" %>
+          <div data-controller="show-password">
+            <%= f.input :password, required: true, input_html: { autocomplete: "new-password", class: "rounded-input", data: { password_target: "password" } }, label: false, placeholder: "Senha *" %>
+            <button type="button" data-action="click->show-password#toggleVisibility">
+              <i class="fa fa-eye"></i>
+            </button>
+          </div>
           <p class="hint-password">Mínimo de <%= @minimum_password_length %> caracteres. Utilize letras, números e símbolos.</p>
           <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password", class: "rounded-input" }, label: false, placeholder: "Confirme sua Senha *" %>
           <div class="agree-terms">
