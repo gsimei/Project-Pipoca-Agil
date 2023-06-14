@@ -1,4 +1,5 @@
-<div class="containner devise">
+
+<div class="container devise">
   <div class="row">
     <div class="col-md-4 mx-auto login-form-signup">
       <div class="text-center mb-3 mt-3">
@@ -7,22 +8,28 @@
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
         <%= f.error_notification %>
         <div class="form-inputs-signup mx-auto">
-          <%= f.input :name, required: true, autofocus: true, input_html: { autocomplete: "name", class: "rounded-input" }, label: false, placeholder: "Nome Completo *" %>
-          <%= f.input :date_of_birth, required: true, as: :string, input_html: { autocomplete: "off", class: "rounded-input", placeholder: "Data de Nascimento (dd/mm/aaaa) *" }, label: false %>
-          <%= f.input :email, required: true, input_html: { autocomplete: "email", class: "rounded-input" }, label: false, placeholder: "E-mail *" %>
-          <div data-controller="show-password">
-            <%= f.input :password, required: true, input_html: { autocomplete: "new-password", class: "rounded-input", data: { password_target: "password" } }, label: false, placeholder: "Senha *" %>
-            <%# <button type="button" data-action="click->show-password#toggleVisibility">
-              <i class="fa fa-eye"></i>
-            </button> %>
+          <div class="form-group">
+            <%= f.input :name, required: true, autofocus: true, input_html: { autocomplete: "name", class: "rounded-input form-control" }, label: false, placeholder: "Nome Completo *" %>
+          </div>
+          <div class="form-group">
+            <%= f.input :date_of_birth, required: true, as: :string, input_html: { autocomplete: "off", class: "rounded-input form-control", placeholder: "Data de Nascimento (dd/mm/aaaa) *" }, label: false %>
+          </div>
+          <div class="form-group">
+            <%= f.input :email, required: true, input_html: { autocomplete: "email", class: "rounded-input form-control" }, label: false, placeholder: "E-mail *" %>
+          </div>
+          <div class="form-group col"> <!-- Adicionada a classe "col" aqui -->
+            <%= f.input :password, required: true, input_html: { autocomplete: "new-password", class: "rounded-input form-control", data: { password_target: "password" } }, label: false, placeholder: "Senha *" %>
           </div>
           <p class="hint-password">Mínimo de <%= @minimum_password_length %> caracteres. Utilize letras, números e símbolos.</p>
-          <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password", class: "rounded-input" }, label: false, placeholder: "Confirme sua Senha *" %>
+          <div class="form-group">
+            <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password", class: "rounded-input form-control" }, label: false, placeholder: "Confirme sua Senha *" %>
+          </div>
           <div class="agree-terms">
-            <%= f.check_box :agree_terms, id: "agree_terms" %>
-            <%= label_tag "agree_terms", "Eu li e concordo com os " %>
-            <%= link_to "termos de privacidade", privacy_path, class: "privacy-terms" %>
-            <%= f.input :agree_terms, as: :boolean, label: "Deseja receber atualizacoes por email?" %>
+            <div class="form-check">
+              <%= f.check_box :agree_terms, id: "agree_terms", class: "form-check-input" %>
+              <%= label_tag "agree_terms", "Eu li e concordo com os ", class: "form-check-label" %>
+              <%= link_to "termos de privacidade", privacy_path, class: "privacy-terms" %>
+            </div>
           </div>
           <div class="mandatory-field">
             <p>* Campos obrigatórios</p>
