@@ -11,8 +11,14 @@
   font-family: 'Poppins', sans-serif;
   background-color: #EFE9F3;
   padding-top: 5rem;
-  padding-left: 9rem;
-  padding-right: 9rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.title-home {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: xxx-large;
 }
 
 .btn-cadastrar {
@@ -33,32 +39,43 @@
   }
 }
 .title {
-  font-size: 3rem;
+  font-size: xxx-large;
   font-weight: bold;
   margin-bottom: 1rem;
 }
+
+.title-description {
+  padding: 0px 6rem 0 0;
+  font-size: 1.2rem;
+}
+
 #possui-conta {
   font-size: 0.7rem;
   text-decoration: underline;
 }
 
 .first-banner {
+  gap: 9rem;
+  font-weight: bold;
+  padding-top: 3rem;
+
   h1 {
     font-weight: bold;
     font-size: 3rem;
   }
-  gap: 9rem;
-  font-weight: bold;
 }
 
 .first-banner-left {
   flex: 1;
-  padding-left: 13rem;
+  margin: 0px 17rem 0 12rem;
 }
 
 .first-banner-right {
   flex: 1;
+  margin: 0 7rem 0 0rem;
 }
+
+
 .second-banner {
   justify-content: center;
   gap: 2rem;
@@ -72,33 +89,78 @@
   }
 }
 
-.card {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
+.title-video {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: xxx-large;
 }
 
-.card-content {
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+}
+
+.first-row {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.second-row {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.video {
+  display: flex !important;
+  flex-direction: row;
+}
+
+.video-first {
+  padding-left: 3rem;
+}
+
+.video-second {
+  padding-left: 20rem;
+}
+
+.video-third {
+  padding-left: 3rem;
+}
+
+.video-forth {
+  padding-left: 21rem;
+}
+
+.video-content {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.card-img {
-  img {
-    width: 200px;
-    height: auto;
-    margin: 20px;
-  }
-}
 
-.card-content h3 {
+.video-content h3 {
   margin: 0;
+  font-weight: bold;
+  text-decoration: underline;
+
 }
 
-.card-content p {
+.video-content p {
   margin-top: 5px;
+  font-weight: 600;
 }
+
+.description-container {
+  padding-right: 3rem;
+}
+
 
 .logo-parcerias {
   display: flex;
@@ -124,6 +186,14 @@
 
 .centered-textarea {
   text-align: center;
+}
+
+.feedback {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.feedback-field{
 }
 
 .fa-star {

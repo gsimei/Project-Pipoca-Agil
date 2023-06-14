@@ -1,51 +1,50 @@
-
+<div class="containner">
   <div class="d-flex first-banner">
     <div class="first-banner-left">
-      <h1 style="margin-top: 60px;">O Podcast mais animado do Mundo Ágil</h1>
-      <p>Cadastre-se no clube de assinantes e tenha acesso a todos os conteúdos exclusivos do mundo da tecnologia</p>
+      <p class="title-home">O Podcast mais animado do Mundo Ágil</p>
+      <div class="title-description">
+        <p>Cadastre-se no clube de assinantes e tenha acesso a todos os conteúdos exclusivos do mundo da tecnologia</p>
+      </div>
       <a class="btn btn-cadastrar" href="/users/sign_up" style="margin-bottom: 10px;">Cadastrar</a>
       <p id="possui-conta">
         <a href="/users/sign_in" style="color: #000;">Já possui conta? Entre aqui</a>
       </p>
     </div>
     <div class="first-banner-right">
-      <%= image_tag "Photos-Ibson/foto_ibson.png", style: "margin-top: 50px;" %> <br>
+      <%= image_tag "Photos-Ibson/foto_ibson.png" %> <br>
       <%= link_to "Acesse a trilha do conhecimento", root_path, style: "color: #000; margin-right: 5px;" %>
     </div>
   </div>
   <div class="d-flex second-banner mt-5  py-5">
     <div>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/FtMOybb4MoA" frameborder="0" allowfullscreen></iframe>
-
     </div>
-
     <div>
-      <h1 style="margin-top: 0px;">Video em Destaque</h1>
+      <p class="title-video">Video em Destaque</p>
       <p><strong>O primeiro Podcast carioca falando sobre agilidade.</strong></p>
       <p><strong>Em parceria com Paulo Caroli</strong></p>
     </div>
-
   </div>
-
-<div class="container">
-  <h1 class="title text-center mt-5">Últimos Episódios</h1>
-  <div class="d-flex justify-content-between flex-row" style="margin-bottom: 40px;">
-    <div class="video-container" style="width: 380px; margin-right: 20px;">
-      <div class="d-flex align-items-center description-container">
-        <iframe src="https://www.youtube.com/embed/RrwXUZlvQ5s" frameborder="0" allowfullscreen></iframe>
-        <div class="video-description">
+  <p class="title text-center mt-5 mb-5">Últimos Episódios</p>
+  <div class="videos mt-5">
+    <div class="d-flex first-row">
+      <div class="video video-first">
+        <div class="video-img">
+          <iframe src="https://www.youtube.com/embed/RrwXUZlvQ5s" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-content">
           <h3>Pix - Desenvolvimento ágil</h3>
           <p>
             17 de janeiro de 2022<br>
-            Convidados: Caique, Nelson, Racioppi, Romulo, Guilherme, LP, Marcelo e Carlos.
+            Convidados: Caique, Nelson, <br> Racioppi, Romulo, Guilherme, <br> LP, Marcelo e Carlos.
           </p>
         </div>
       </div>
-    </div>
-    <div class="video-container" style="width: 380px; margin-right: 20px;">
-      <div class="d-flex align-items-center description-container">
-        <iframe src="https://www.youtube.com/embed/DbWVH3Jrl7U" frameborder="0" allowfullscreen></iframe>
-        <div class="video-description">
+      <div class="video video-second">
+        <div class="video-img">
+          <iframe src="https://www.youtube.com/embed/DbWVH3Jrl7U" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-content">
           <h3>Clínica KANBAN</h3>
           <p>
             10 de janeiro de 2022<br>
@@ -54,12 +53,12 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="d-flex justify-content-between flex-row">
-    <div class="video-container" style="width: 380px; margin-right: 60px;">
-      <div class="d-flex align-items-center description-container">
-        <iframe src="https://www.youtube.com/embed/PsJP7JHiQlA" frameborder="0" allowfullscreen></iframe>
-        <div class="video-description">
+    <div class="d-flex second-row">
+      <div class="video video-third">
+        <div class="video-img">
+          <iframe src="https://www.youtube.com/embed/PsJP7JHiQlA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-content">
           <h3>Cliente Ágil</h3>
           <p>
             11 de janeiro de 2022<br>
@@ -67,11 +66,11 @@
           </p>
         </div>
       </div>
-    </div>
-    <div class="video-container" style="width: 380px; margin-right: 0;">
-      <div class="d-flex align-items-center description-container">
-        <iframe src="https://www.youtube.com/embed/679b8Ku9lu0" frameborder="0" allowfullscreen></iframe>
-        <div class="video-description">
+      <div class="video video-forth">
+        <div class="video-img">
+          <iframe src="https://www.youtube.com/embed/679b8Ku9lu0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-content">
           <h3>Agilidade em Portugal</h3>
           <p>
             8 de janeiro de 2022<br>
@@ -81,9 +80,7 @@
       </div>
     </div>
   </div>
-</div>
-
-  <h1 class="title text-center mt-5">Parcerias</h1>
+  <p class="title text-center mt-5">Parcerias</p>
   <div class="logo-parcerias">
     <div class="d-flex">
       <%= image_tag "logos/logo_coach.jpg", class: "logo-img" %>
@@ -100,7 +97,7 @@
       <%= image_tag "logos/logo_manifest.jpg", class: "logo-img" %>
     </div>
   </div>
-  <h1 class="title text-center mt-5 pb-5">Ouça em:</h1>
+  <p class="title text-center mt-5 pb-5">Ouça em:</p>
   <div class="d-flex justify-content-between logo-podcasts">
     <%= image_tag "Icones_streaming/icone_spotify.jpg", class: "logo-podcast-img" %>
     <%= image_tag "Icones_streaming/icone_anchor.jpg", class: "logo-podcast-img" %>
@@ -108,32 +105,26 @@
     <%= image_tag "Icones_streaming/icone_overcast.jpg", class: "logo-podcast-img" %>
     <%= image_tag "Icones_streaming/icone_podcast_apple.jpg", class: "logo-podcast-img" %>
   </div>
-  <div>
-  <div>
-  <div>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
-
-<h2 class="feedback text-center mt-5">Seu feedback é muito importante para nós!</h2>
-<div class="stars-container">
-  <i class="fas fa-star star" onclick="rateStar(1)"></i>
-  <i class="fas fa-star star" onclick="rateStar(2)"></i>
-  <i class="fas fa-star star" onclick="rateStar(3)"></i>
-  <i class="fas fa-star star" onclick="rateStar(4)"></i>
-  <i class="fas fa-star star" onclick="rateStar(5)"></i>
-</div>
-<br>
-<div style="text-align: center;">
-  <textarea id="feedback" name="feedback" rows="8" cols="100" class="rounded-border"></textarea>
+  <p class="feedback text-center mt-5">Seu feedback é muito importante para nós!</p>
+  <div class="stars-container">
+    <i class="fas fa-star star" onclick="rateStar(1)"></i>
+    <i class="fas fa-star star" onclick="rateStar(2)"></i>
+    <i class="fas fa-star star" onclick="rateStar(3)"></i>
+    <i class="fas fa-star star" onclick="rateStar(4)"></i>
+    <i class="fas fa-star star" onclick="rateStar(5)"></i>
+  </div>
   <br>
-<div class="d-flex justify-content-end" style="margin-right: 260px;">
-  <button type="submit" class="btn btn-send rounded-border btn-shadow" onclick="submitFeedback()">
-    <span class="btn-text">Enviar</span>
-  </button>
+  <div class="feedback-field">
+    <div class="row" style="text-align: center;">
+    <div class="col-md-8 mx-auto">
+      <textarea id="feedback" name="feedback" rows="8" cols="100" class="rounded-border"></textarea>
+    </div>
+    <div class=" row d-flex justify-content-end" style="margin-right: 260px;">
+      <button type="submit" class="btn btn-send rounded-border btn-shadow" onclick="submitFeedback()">
+        <span class="btn-text">Enviar</span>
+      </button>
+    </div>
+  </div>
 </div>
 
 <script>

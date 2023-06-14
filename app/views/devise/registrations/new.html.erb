@@ -12,9 +12,9 @@
           <%= f.input :email, required: true, input_html: { autocomplete: "email", class: "rounded-input" }, label: false, placeholder: "E-mail *" %>
           <div data-controller="show-password">
             <%= f.input :password, required: true, input_html: { autocomplete: "new-password", class: "rounded-input", data: { password_target: "password" } }, label: false, placeholder: "Senha *" %>
-            <button type="button" data-action="click->show-password#toggleVisibility">
+            <%# <button type="button" data-action="click->show-password#toggleVisibility">
               <i class="fa fa-eye"></i>
-            </button>
+            </button> %>
           </div>
           <p class="hint-password">Mínimo de <%= @minimum_password_length %> caracteres. Utilize letras, números e símbolos.</p>
           <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password", class: "rounded-input" }, label: false, placeholder: "Confirme sua Senha *" %>
