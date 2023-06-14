@@ -11,7 +11,7 @@ Rails.application.configure do
   authentication: :plain,
   enable_starttls_auto: true
   }
-  # config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
+   config.action_mailer.default_url_options = { host: "https://pipoca-agil-app1.herokuapp.com/" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
