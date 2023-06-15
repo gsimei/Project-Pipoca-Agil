@@ -1,3 +1,4 @@
+
 pt-BR:
   activerecord:
     attributes:
@@ -6,6 +7,7 @@ pt-BR:
         date_of_birth: "Data de Nascimento"
         email: "E-mail"
         password: "Senha"
+        password_confirmation: "Confirmação de Senha"
     errors:
       models:
         user:
@@ -20,8 +22,20 @@ pt-BR:
             password:
               blank: "não pode ficar em branco"
               invalid: "deve incluir pelo menos uma letra, um número e um caractere especial"
-      messages:
-        blank: "não pode ficar em branco"
-        taken: "já está cadastrado(a) em nosso sistema. Por favor, faça login com sua conta existente ou utilize um endereço de e-mail diferente."
-        password_invalid: "deve incluir pelo menos uma letra, um número e um caractere especial"
-        too_short: "Mínimo de 6 caracteres. Utilize letras, números e símbolos."
+            password_confirmation:
+              blank: "não pode ficar em branco"
+              confirmation: "não corresponde à senha fornecida"
+          messages:
+            blank: "não pode ficar em branco"
+            taken: "já está cadastrado(a) em nosso sistema. Por favor, faça login com sua conta existente ou utilize um endereço de e-mail diferente."
+            password_invalid: "deve incluir pelo menos uma letra, um número e um caractere especial"
+            too_short: "Mínimo de 6 caracteres. Utilize letras, números e símbolos."
+
+  simple_form:
+    user:
+      agree_terms: "Eu li e concordo com os termos de privacidade"
+
+  helpers:
+    label:
+      user:
+        agree_terms: "Eu li e concordo com os %{privacy_terms}"

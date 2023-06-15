@@ -3,9 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
+       # validates_confirmation_of :password, message: "A confirmação de senha não corresponde à senha fornecida"
 
+         validates :agree_terms, acceptance: { message: "Você deve concordar com os termos de privacidade" }
          validates :password, format: { with: /\A(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}\z/, message: "deve incluir pelo menos uma letra, um número e um caractere especial" }
-         validates :email, uniqueness: { message: "Este e-mail já está cadastrado em nosso sistema. Por favor, faça login com sua conta existente ou utilize um endereço de e-mail diferente." }
          validates :agree_terms, acceptance: { message: "Você deve concordar com a Política de Privacidade e Termos de Uso" }
          validates :name, presence: { message: "O nome não pode ficar em branco" }
          validates :date_of_birth, presence: { message: "A data de nascimento não pode ficar em branco" }
