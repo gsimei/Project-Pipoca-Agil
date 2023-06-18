@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'registrations/create'
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    passwords: 'users/passwords',
+    sessions: 'users/sessions'
+  }
 
-  devise_for :users, controllers: { registrations: 'users/registrations' }
 
   root to: "pages#home"
 
