@@ -25,7 +25,8 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'georgesimei@gmail.com'
-
+  config.reset_password_keys = [:email]
+  config.allow_unconfirmed_access_for = nil
   # Configure the class responsible to send e-mails.
   config.mailer = 'UserMailer'
 
@@ -310,6 +311,6 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
-  
+
 
 end

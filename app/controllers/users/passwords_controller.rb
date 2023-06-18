@@ -1,34 +1,31 @@
-# frozen_string_literal: true
-
 class Users::PasswordsController < Devise::PasswordsController
-  # GET /resource/password/new
-  # def new
-  #   super
-  # end
+  # GET /users/password/edit?reset_password_token=abcdef
+  def edit
+    self.resource = resource_class.new
+    set_minimum_password_length
+    resource.reset_password_token = params[:reset_password_token]
+  end
 
-  # POST /resource/password
-  # def create
-  #   super
-  # end
+  # PUT /users/password
+  def update
+    self.resource = resource_class.reset_password_by_token(resource_params)
 
-  # GET /resource/password/edit?reset_password_token=abcdef
-  # def edit
-  #   super
-  # end
+    if resource.errors.empty? && resource.update(password_params)
+      logger.info("Senha atualizada com sucesso para o usuário #{resource.email}")
+      resource.unlock_access! if unlockable?(resource)
 
-  # PUT /resource/password
-  # def update
-  #   super
-  # end
+      flash[:notice] = "Senha atualizada com sucesso. Faça login com sua nova senha."
+      redirect_to new_user_session_path
+    else
+      logger.error("Erro ao atualizar a senha para o usuário #{resource.email}")
+      set_minimum_password_length
+      respond_with resource
+    end
+  end
 
-  # protected
+  private
 
-  # def after_resetting_password_path_for(resource)
-  #   super(resource)
-  # end
-
-  # The path used after sending reset password instructions
-  # def after_sending_reset_password_instructions_path_for(resource_name)
-  #   super(resource_name)
-  # end
+  def password_params
+    params.require(:user).permit(:password, :password_confirmation)
+  end
 end

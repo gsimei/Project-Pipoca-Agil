@@ -17,9 +17,12 @@
              controller_name == 'pages' && action_name == 'email_confirmation'|| controller_name == 'pages' && action_name == 'privacy' %>
     <%= render "shared/navbar" %>
     <% end %>
-    <%= render "shared/flashes" %>
+    <% flash.each do |key, message| %>
+      <div class="flash <%= key %>">
+        <%= message %>
+      </div>
+    <% end %>
 
     <%= yield %>
-  </body>
 
-</html>
+    
